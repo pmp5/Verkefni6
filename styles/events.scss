@@ -1,0 +1,81 @@
+// Sækja config
+@import './config';
+// Allir stílar fyrir events
+.events {
+  margin-bottom: $font-size * 2;
+
+  .col {
+    margin-bottom: $font-size * 2;
+  }
+}
+
+.event {
+  background-color: $ljosgrar;
+  height: 100%;
+  min-height: 250px;
+  position: relative;
+  width: 100%;
+  word-break: break-word;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  h3 {
+    margin-bottom: $font-size;
+  }
+
+  p {
+    font-style: italic;
+    margin-bottom: $font-size;
+  }
+
+  ul {
+    font-style: italic;
+    list-style: none;
+  }
+
+  .card {
+    bottom: 0;
+    display: flex;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transition: $transition;
+  }
+
+  &:hover .card {
+    transform: rotateY(180deg);
+  }
+
+  .face {
+    backface-visibility: hidden;
+    height: 100%;
+    padding: $font-size * 0.5;
+    position: absolute;
+    width: 100%;
+  }
+
+  .face.back {
+    transform: rotateY(180deg);
+  }
+
+  .front {
+    display: flex;
+  }
+
+  .front h3 {
+    font-size: 2em;
+    margin: auto;
+    text-align: center;
+  }
+
+  .back {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+}

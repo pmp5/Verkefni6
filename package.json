@@ -1,0 +1,22 @@
+{
+  "name": "verkefni6",
+  "version": "1.0.0",
+  "description": "Bokabud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser-sync": "browser-sync start --server --files index.html styles.css",
+    "sass": "node-sass styles.scss styles.css",
+    "sass-watch": "node-sass --source-map-embed --watch .scss --recursive styles.css",
+    "dev": "concurrently npm:sass-watch npm:browser-sync start --server --files index.html styles.css",
+    "sass-nomap": "node-sass styles.scss styles.css",
+    "lint": "stylelint styles.scss ./**/.scss"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "Vefforitun"
+  },
+  "author": "pmp5",
+  "license": "ISC"
+}
